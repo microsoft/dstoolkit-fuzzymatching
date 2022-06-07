@@ -102,9 +102,7 @@ Prior to executing a matching algorithms, it is often useful to use pre-processi
 
 ## Scalability Considerations
 
-Because fuzzy matching algorithms typically require every string to be compared to every other string in the dataset, the standard algorithms will have quadratic time complexity O(n^2)O(n
-​2
-​​ ) and will quickly become computationally intensive even for modestly large datasets. Two approaches to address the scalability include blocking techniques, which reduce the number of entities that need to be compared, or parallelization techniques including multi-threading and Spark-based approaches which execute multiple matches in parallel.
+Because fuzzy matching algorithms typically require every string to be compared to every other string in the dataset, the standard algorithms will have quadratic time complexity O(n^2^) and will quickly become computationally intensive even for modestly large datasets. Two approaches to address the scalability include blocking techniques, which reduce the number of entities that need to be compared, or parallelization techniques including multi-threading and Spark-based approaches which execute multiple matches in parallel.
 
 ## Blocking/Indexing Techniques
 
