@@ -20,10 +20,10 @@ Deepen customer or patient insights; uncover errors in invoices or other large t
 
 The architecture for fuzzy matching for data management with structured data will generally follow the pattern for batch ingestion and enrichment of structured data. In the simplest example, this will involve:
 
-1. Ingest: Batch ingestion of data from line of business (LOB) applications via Azure Data Factory.
-2. Store: Storing the data as structured tables in an Azure SQL database.
-3. Fuzzy Matching: For non-Spark fuzzy matching, a Python Azure Function can be used as the scalable compute target or for Spark-based fuzzy matching Azure Databricks can be leveraged as the scalable compute target.
-4. Serve: Fuzzy matched or de-duplicated data will then sent back to the Azure SQL database to be consumed by downstream applications and BI reports.
+1. **Ingest:** Batch ingestion of data from line of business (LOB) applications via Azure Data Factory.
+2. **Store:** Storing the data as structured tables in an Azure SQL database.
+3. **Fuzzy Matching:** For non-Spark fuzzy matching, a Python Azure Function can be used as the scalable compute target or for Spark-based fuzzy matching Azure Databricks can be leveraged as the scalable compute target.
+4. **Serve:** Fuzzy matched or de-duplicated data will then sent back to the Azure SQL database to be consumed by downstream applications and BI reports.
 
 ### Fuzzy Matching with Structured and Unstructured Data
 
@@ -49,7 +49,7 @@ The most common approach to fuzzy matching is to calculate the similarity betwee
 ### Common Techniques
 
 - **Edit Based:** compute the number of operations needed to transform one string to another. Levenshtein distance is the most commonly used technique in this category
-Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
+-- Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
 - **Token Based:** based on an input set of tokens, finds the similar tokens between both sets. Generally used by transforming a sentence into a token of words or n-grams.
 Best for: Comparing strings that have multiple character or word-level insertions, deletions or substitutions at a time. Generally more performant than Edit Distance methods. For example: matching the strings "Contoso Corp Inc", "Contoso Corp" and "Contoso Corp LLC" where the "Inc" or "LLC" are insertions of a word being added rather than just single character insertions.
 - **Sequence Based:** based on common sub-strings between the 2 strings. Tries to find the longest sequence present in both strings.
