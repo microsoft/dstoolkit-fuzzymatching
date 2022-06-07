@@ -32,7 +32,7 @@ The architecture for fuzzy matching for data management with structured data wil
 To incorporate unstructured data to a fuzzy matching architecture, you can add the general knowledge mining architecture to the ingestion process. This architecture that incorporates both structured and unstructured documents involves the following:
 
 1. **Ingest:** Batch ingestion of structured from line of business (LOB) applications and unstructured documents via Azure Data Factory.
-2. **Store & Enrich:** Storing structured data as tables in Azure SQL database. Storing unstructured documents in Azure Storage (blob or Azure Data Lake Storage, depending on security requirements). Unstructured documents are indexed and enriched via Azure Cognitive Search and the results are persisted back to the storage account. Visit the Knowledge Mining Wiki  for further details.
+2. **Store & Enrich:** Storing structured data as tables in Azure SQL database. Storing unstructured documents in Azure Storage (blob or Azure Data Lake Storage, depending on security requirements). Unstructured documents are indexed and enriched via Azure Cognitive Search and the results are persisted back to the storage account. Visit the [Knowledge Mining repo](https://github.com/microsoft/dstoolkit-km-solution-accelerator) for further details.
 3. **Fuzzy Matching:** For non-Spark fuzzy matching, a Python Azure Function can be used as the scalable compute target or for Spark-based fuzzy matching Azure Databricks can be leveraged as the scalable compute target.
 4. **Serve:** Fuzzy matched or de-duplicated data will then sent back to the Azure SQL database to be consumed by downstream applications and BI reports.
 
@@ -48,21 +48,21 @@ The most common approach to fuzzy matching is to calculate the similarity betwee
 
 ### Common Techniques
 
-- **Edit Based:** compute the number of operations needed to transform one string to another. Levenshtein distance is the most commonly used technique in this category..
-Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
-- **Token Based:** based on an input set of tokens, finds the similar tokens between both sets. Generally used by transforming a sentence into a token of words or n-grams..
-Best for: Comparing strings that have multiple character or word-level insertions, deletions or substitutions at a time. Generally more performant than Edit Distance methods. For example: matching the strings "Contoso Corp Inc", "Contoso Corp" and "Contoso Corp LLC" where the "Inc" or "LLC" are insertions of a word being added rather than just single character insertions.
+- **Edit Based:** compute the number of operations needed to transform one string to another. Levenshtein distance is the most commonly used technique in this category.
+- Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
+- **Token Based:** based on an input set of tokens, finds the similar tokens between both sets. Generally used by transforming a sentence into a token of words or n-grams.
+- Best for: Comparing strings that have multiple character or word-level insertions, deletions or substitutions at a time. Generally more performant than Edit Distance methods. For example: matching the strings "Contoso Corp Inc", "Contoso Corp" and "Contoso Corp LLC" where the "Inc" or "LLC" are insertions of a word being added rather than just single character insertions.
 - **Sequence Based:** based on common sub-strings between the 2 strings. Tries to find the longest sequence present in both strings..
-Best for: Comparing strings with multiple words where substring matches are the most important to match on. For example: matching a location named "Golden Gate Park: A large urban park near the Golden Gate bridge" with "Golden Gate Park: California's most visited park located next to the Golden Gate Bridge" where "Golden Gate Park" and "Golden Gate Bridge" would be substrings matched on.
+- Best for: Comparing strings with multiple words where substring matches are the most important to match on. For example: matching a location named "Golden Gate Park: A large urban park near the Golden Gate bridge" with "Golden Gate Park: California's most visited park located next to the Golden Gate Bridge" where "Golden Gate Park" and "Golden Gate Bridge" would be substrings matched on.
 
 ### Advanced Techniques
 
 - **Phonetic Based:** computes similarity based on how strings phonetically sound.
 - Best for: matching strings that come from transcribed audio. For example: matching the name "Jesus" to misspelled transcribed version "Heyzeus".
-- **Word Embeddings:** leverages word embeddings such as BERT  or Word2Vec  to incorporate the semantic meaning of words by first converting strings into a vector representation where similiar words have similar weighting.
+- **Word Embeddings:** leverages word embeddings such as [BERT](https://arxiv.org/abs/1810.04805) or [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) to incorporate the semantic meaning of words by first converting strings into a vector representation where similiar words have similar weighting.
 - Best for: when the meaning of the words are important. For example: matching "123 main street" to "123 main road" where "street" and "road" are not misspellings but actually words with similar meanings
-- **Compression Based:** calculates the distance of compressed strings using normalized compression distance (NCD)  using different compression algorithms.
-- Best for: comparing strings where order and repetition doesn't matter. This article  explains this concept well. For example: matching "000000005617" to "005167" to "05167" would be considered different under edit distance but perfect matches under NCD.
+- **Compression Based:** calculates the distance of compressed strings using [normalized compression distance (NCD)](https://en.wikipedia.org/wiki/Normalized_compression_distance#Normalized_compression_distance) using different compression algorithms.
+- Best for: comparing strings where order and repetition doesn't matter. [This article](https://web.archive.org/web/20190311173112/https://articles.life4web.ru/eng/ncd/) explains this concept well. For example: matching "000000005617" to "005167" to "05167" would be considered different under edit distance but perfect matches under NCD.
 
 
 
