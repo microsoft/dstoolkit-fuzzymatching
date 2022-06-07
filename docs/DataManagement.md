@@ -48,14 +48,14 @@ The most common approach to fuzzy matching is to calculate the similarity betwee
 
 ### Common Techniques
 
-- **Edit Based:** compute the number of operations needed to transform one string to another. Levenshtein distance is the most commonly used technique in this category
-- Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
-- **Token Based:** based on an input set of tokens, finds the similar tokens between both sets. Generally used by transforming a sentence into a token of words or n-grams.
-- Best for: Comparing strings that have multiple character or word-level insertions, deletions or substitutions at a time. Generally more performant than Edit Distance methods. For example: matching the strings "Contoso Corp Inc", "Contoso Corp" and "Contoso Corp LLC" where the "Inc" or "LLC" are insertions of a word being added rather than just single character insertions.
-- **Sequence Based:** based on common sub-strings between the 2 strings. Tries to find the longest sequence present in both strings.
-- Best for: Comparing strings with multiple words where substring matches are the most important to match on. For example: matching a location named "Golden Gate Park: A large urban park near the Golden Gate bridge" with "Golden Gate Park: California's most visited park located next to the Golden Gate Bridge" where "Golden Gate Park" and "Golden Gate Bridge" would be substrings matched on.
+- **Edit Based:** compute the number of operations needed to transform one string to another. Levenshtein distance is the most commonly used technique in this category..
+Best for: Comparing strings with misspellings that are generally single character insertions, deletions, or substitutions. For example: matching the word "successful" to the misspelled version "sucessful"
+- **Token Based:** based on an input set of tokens, finds the similar tokens between both sets. Generally used by transforming a sentence into a token of words or n-grams..
+Best for: Comparing strings that have multiple character or word-level insertions, deletions or substitutions at a time. Generally more performant than Edit Distance methods. For example: matching the strings "Contoso Corp Inc", "Contoso Corp" and "Contoso Corp LLC" where the "Inc" or "LLC" are insertions of a word being added rather than just single character insertions.
+- **Sequence Based:** based on common sub-strings between the 2 strings. Tries to find the longest sequence present in both strings..
+Best for: Comparing strings with multiple words where substring matches are the most important to match on. For example: matching a location named "Golden Gate Park: A large urban park near the Golden Gate bridge" with "Golden Gate Park: California's most visited park located next to the Golden Gate Bridge" where "Golden Gate Park" and "Golden Gate Bridge" would be substrings matched on.
 
-###Advanced Techniques
+### Advanced Techniques
 
 - **Phonetic Based:** computes similarity based on how strings phonetically sound.
 - Best for: matching strings that come from transcribed audio. For example: matching the name "Jesus" to misspelled transcribed version "Heyzeus".
