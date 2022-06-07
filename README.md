@@ -15,6 +15,21 @@ Given the pervasiveness of these use cases that we have seen with our customers,
 
 See the deck [Introduction to Fuzzy Matching Standard Delivery IP](/docs/IntroductionToFuzzyMatchingStandardDeliveryIP.pptx) found in the docs folder
 
+## What's in the docs
+The docs contains best practices and resources for implementing fuzzy matching solutions. The docs are broken down into the following sections:
+- [Data Management](/docs/DataManagement.md)
+- [People Matching](/docs/PeopleMatching.md)
+- [Knowledge Graphs](/docs/KnowledgeGraphs.md)
+
+## Repository structure
+
+```
+├───architecture
+├───data
+├───docs
+├───notebooks
+```
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
