@@ -13,7 +13,7 @@ Fuzzy matching is used in situations in which the client needs to develop data-d
 
 Given the pervasiveness of these use cases that we have seen with our customers, we want to provide shared best practices and IP around fuzzy matching.
 
-See the deck [Introduction to Fuzzy Matching Standard Delivery IP](/docs/Introduction to Fuzzy Matching Standard Delivery IP.pptx) found in the docs folder
+See the deck [Introduction to Fuzzy Matching Standard Delivery IP](/docs/IntroductionToFuzzyMatchingStandardDeliveryIP.pptx) found in the docs folder
 
 ## Contributing
 
