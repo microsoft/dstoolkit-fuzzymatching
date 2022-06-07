@@ -12,6 +12,8 @@ Deepen customer or patient insights; uncover errors in invoices or other large t
 - Reduce time spent on manually matching records or manual de-duplication
 - Collect longitudinal patient information to better provide coordinated care
 
+---
+
 ## Architecture
 
 ### Fuzzy Matching with Structured Data
@@ -66,6 +68,14 @@ The most common approach to fuzzy matching is to calculate the similarity betwee
 - **Compression Based:** calculates the distance of compressed strings using [normalized compression distance (NCD)](https://en.wikipedia.org/wiki/Normalized_compression_distance#Normalized_compression_distance) using different compression algorithms.
 - Best for: comparing strings where order and repetition doesn't matter. [This article](https://web.archive.org/web/20190311173112/https://articles.life4web.ru/eng/ncd/) explains this concept well. For example: matching "000000005617" to "005167" to "05167" would be considered different under edit distance but perfect matches under NCD.
 
+---
 
+### First-Party Azure Solution
+
+[Azure Cognitive Search](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search) is the Azure search-as-a-service solution that allows you to index text documents and is based on Apache Lucene.
+
+- The [fuzzy search capability](https://docs.microsoft.com/en-us/azure/search/search-query-fuzzy) in Azure Cognitive search uses an implementation of [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) distance to find approximate string matches.
+- Using the fuzzy search capability in Cognitive Search, you can [ingest the data sources](https://docs.microsoft.com/en-us/azure/search/search-what-is-data-import) you want to fuzzy match against, index the fields you want to match or de-duplicate on and return the [search scores](https://docs.microsoft.com/en-us/azure/search/index-similarity-and-scoring). You can then use theses scores to set a threshold for what you will consider a match or duplicate.
+- The [Knowledge Mining repo](https://github.com/microsoft/dstoolkit-km-solution-accelerator) contains delivery guidance and architecture best practices for using Cognitive Search.
 
 
