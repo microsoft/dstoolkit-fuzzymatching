@@ -38,6 +38,8 @@ To incorporate unstructured data to a fuzzy matching architecture, you can add t
 
 The actual architecture will depend on the needs of your customer but this is the most recommended and lightweight solution. Azure Synapse Analytics spark pools were not recommended as a Spark compute engine because they will not be as performant as Databricks and fuzzy matching is a highly performance-intensive task. A fully integrated architecture with Azure Synapse Analytics using Azure Synapse SQL pools, Spark pools, data flows, and Power BI represents a more streamlined but potentially less performant alternative.
 
+---
+
 ## Techniques
 
 There are many different techniques for using fuzzy matching for matching records or de-duplication. Fundamentally, how fuzzy matching works is by finding the best approximate match on one or more fields when there is not a shared primary or composite key. These are often based on text fields but can also be applied to numeric or encoded fields, geographic fields, or date/time fields. Different strategies should be considered based on the type of field, the source of distance or dissimilarity (i.e. misspellings, different formats for addresses/dates), and considerations for scalability.
