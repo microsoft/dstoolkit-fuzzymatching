@@ -122,9 +122,9 @@ In addition to reducing the search space, scalability concerns can be addressed 
 
 ## Machine Learning Approaches
 
-Supervised machine learning can be used when a labelled training set of record matches are provided and provides the advantage of allowing multiple different matching algorithms to be evaluated and weighted based on the performance of the model. In this approach, fuzzy matching becomes a binary classification model where the features of the model are derived from applying multiple fuzzy matching algorithms to each set of records. Feature selection or models which include feature selection can then be applied to select the most useful matching features and then a model can be built on the training data. This model can then be used to predict whether any two strings in the remaining dataset are a match and the model can be evaluated using performance metrics such as precision, recall, F1, or AUC. Further details for this approach can be found here: Deduplication Customer PPT and an implementation of this approach can be found here: deduplication  (Credit: Srinath Sivalenka, Delivery Data Scientist).
+Supervised machine learning can be used when a labelled training set of record matches are provided and provides the advantage of allowing multiple different matching algorithms to be evaluated and weighted based on the performance of the model. In this approach, fuzzy matching becomes a binary classification model where the features of the model are derived from applying multiple fuzzy matching algorithms to each set of records. Feature selection or models which include feature selection can then be applied to select the most useful matching features and then a model can be built on the training data. This model can then be used to predict whether any two strings in the remaining dataset are a match and the model can be evaluated using performance metrics such as precision, recall, F1, or AUC. Further details for this approach can be found in the deck *Deduplication Customer PPT* in the *docs* folder.
 
-In this MLADS talk: Data Unification at Scale Recording  the CSEO team discuss their design for design for fuzzy matching for data management that will be part of an upcoming internal tool called Microsoft Data Unification (MDU). Their solution uses blocking and a supervised machine learning approach on Spark. A copy of the deck can be found here: Data Unification at Scale PPT.
+In this MLADS talk: [Data Unification at Scale Recording](https://msit.microsoftstream.com/video/2425a1ff-0400-a936-fd76-f1eaa68afd5c?channelId=e34ba1ff-0400-a936-7258-f1eaa6716ffe) the CSEO team discuss their design for design for fuzzy matching for data management that will be part of an upcoming internal tool called Microsoft Data Unification (MDU). Their solution uses blocking and a supervised machine learning approach on Spark. A copy of the deck can be found in the *docs* folder (Data Unification at Scale.PPT).
 
 ---
 
@@ -133,7 +133,7 @@ In this MLADS talk: Data Unification at Scale Recording  the CSEO team discuss t
 For entity linkage and de-duplication, one important consideration is whether the process should be fully automated or involve a human-in-the-loop. There are two human-in-the-loop scenarios:
 
 1. It is often appropriate to involve a human in the loop for lower confidence matches to reduce the number of false positives or false negatives, particularly when the consequences are high (for example: social security records).
-2. Another UX consideration is regarding labelling, where UX can be used along with fuzzy matching approaches to reduce the number of examples that need to be labelled for a training dataset if you plan to use a supervised machine learning approach. Microsoft Data Unification (MDU's) approach uses this: Data Unification at Scale PPT.
+2. Another UX consideration is regarding labelling, where UX can be used along with fuzzy matching approaches to reduce the number of examples that need to be labelled for a training dataset if you plan to use a supervised machine learning approach. Microsoft Data Unification (MDU's) approach uses this.
 
 
 
