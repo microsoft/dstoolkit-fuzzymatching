@@ -11,6 +11,10 @@ Fuzzy matching is used in situations in which the client needs to develop data-d
 3. Longitudinal pation record
 4. Other master data management applications
 
+Given the pervasiveness of these use cases that we have seen with our customers, we want to provide shared best practices and IP around fuzzy matching.
+
+See the deck [Introduction to Fuzzy Matching Standard Delivery IP]("/docs/Introduction to Fuzzy Matching Standard Delivery IP.pptx") found in the docs folder
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
