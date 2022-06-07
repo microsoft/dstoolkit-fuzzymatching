@@ -1,16 +1,15 @@
 ![banner](/fuzzylogo.png)
 
-# Project
+# Fuzzy Matching
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Why Fuzzy Matching IP?
+Fuzzy matching is used in situations in which the client needs to develop data-driven insights off of disparate data sources in which there are missing keys, messy data and/or unstructued data.
 
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+### Examples
+1. Customer Insight (golden record or single source of truth)
+2. Employee records, including skills & capabilities
+3. Longitudinal pation record
+4. Other master data management applications
 
 ## Contributing
 
