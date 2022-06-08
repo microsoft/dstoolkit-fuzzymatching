@@ -85,8 +85,9 @@ The most common approach to fuzzy matching is to calculate the similarity betwee
 A number of OSS libraries exist for fuzzy matching in python, R, and other languages. Below is a table with the algorithms linked to details about how they work, the type of technique, and a Python library where they can be used.
 
 | Algorithm | Technique | Python LIbraries |
-| ----------- | ----------- |
+| --- | --- | --- |
 | Levenshtein | Edit Based | Python Record Linkage Toolkit , Textdistance , Fuzzywuzzy |
+
 
 ## Similarity Algorithms for Other Field Types
 
