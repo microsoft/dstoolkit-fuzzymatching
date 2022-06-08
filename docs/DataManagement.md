@@ -84,7 +84,7 @@ The most common approach to [Fuzzy](https://pypi.org/project/Fuzzy/) matching is
 
 A number of OSS libraries exist for [Fuzzy](https://pypi.org/project/Fuzzy/) matching in python, R, and other languages. Below is a table with the algorithms linked to details about how they work, the type of technique, and a Python library where they can be used.
 
-| Algorithm | Technique | Python LIbraries |
+| **Algorithm** | **Technique** | **Python Libraries** |
 | --- | --- | --- |
 | [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) |
 | [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
@@ -115,7 +115,7 @@ A number of OSS libraries exist for [Fuzzy](https://pypi.org/project/Fuzzy/) mat
 | [Double Metaphone](http://en.wikipedia.org/wiki/Metaphone) | Phonetic Based | [Fuzzy](https://pypi.org/project/Fuzzy/), [Spark-stringmetric (Spark)](https://github.com/MrPowers/spark-stringmetric) |
 | [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) | Word Embeddings | [pytorch-pretained-bert](https://github.com/huggingface/transformers/tree/v0.6.2) |
 | [ELMo](https://allennlp.org/elmo) | Word Embeddings | [TensorFlow Hub](https://www.tensorflow.org/hub) |
-| [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) | Word Embeddings | gensim |
+| [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) | Word Embeddings | [gensim](https://radimrehurek.com/gensim/) |
 | [Arithmetic Coding](https://en.wikipedia.org/wiki/Arithmetic_coding) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
 | [RLE](https://en.wikipedia.org/wiki/Run-length_encoding) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
 | [BWT RLE](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
