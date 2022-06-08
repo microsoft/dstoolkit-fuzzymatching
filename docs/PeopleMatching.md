@@ -60,7 +60,34 @@ If a more custom approach is needed for skill extraction and/or incorporating cu
 3. Use [Azure Cognitive Search](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search) and a custom skill will allow you to leverage the compute from the Azure Function to incorporate custom skill extraction (see next section) for scenarios where you plan to use ontologies outside of the Cognitive Services NER skill entity or where a derived ontology is built. [Custom scoring profiles](https://docs.microsoft.com/en-us/azure/search/index-add-scoring-profiles) can be used along with data from personalization features such as geo location, interests, and user preferences to provide custom ranking and more personalized search results (see next section).
 4. Integrate Azure Cognitive Search into an application through the Search APIs or into an intelligent bot via [Azure Bot Service](https://azure.microsoft.com/en-us/services/bot-service/). An example of using a Bot interface for Azure Cognitive Search can be found here: [Learn AI Knowledge Mining Bootcamp](https://azure.github.io/LearnAI-KnowledgeMiningBootcamp/). Natural language queries sent to the Cognitive Search APIs via the application or bot will be indexed and matched against the skills extracted from the provided data sources to find the best match. Alternatively, users can upload documents such as a resume in a user interface which will be passed through Cognitive Search to extract skills, index the text, and then match against the skills from job description documents. This blog post and demo from the WWL Innovation team demonstrates the latter approach here: [Using Azure Search custom skills to create personalized job recommendations](https://azure.microsoft.com/en-us/blog/using-azure-search-custom-skills-to-create-personalized-job-recommendations/).
 
+---
 
+## Techniques
 
+### Custom Skill Extraction
+
+For custom skill extraction, there are two approaches: an unsupervised approach, and a supervised machine learning approach that requires a labelled training dataset of skills. The unsupervised approach requires an existing skill ontology while the supervised machine learning approach can can be used to generate a data-driven ontology.
+
+### Unsupervised Skill Extraction
+
+In unsupervised custom skill extraction an existing skill ontology such as the [LinkedIn Enterprise Standardized Skills Ontology](https://developer.linkedin.com/docs/ref/v2/standardized-data/skills) or the customer's own skill ontology are required. This process involves the following steps:
+
+1. Pre-process the text data from the candidate data sources (resume, HR database, etc) and job data source (job description, etc.) using techniques identified in the [Data Management](/docs/DataManagement.md) document, section *pre-processing techniques* to do things like removing stopwords, trimming words to their root, and converting to n-gram tokens.
+2. (Optional) Leverage word embeddings such as [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)), [ELMo](https://allennlp.org/elmo), [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) to convert both the skills in the ontology and the words or n-grams in the text data into vectors that represent their semantic similarity to better capture words with similar meanings but different spellings.
+3. Leverage fuzzy matching techniques (see: [Fuzzy Matching Techniques](/docs/DataManagement.md)(section *techniques*) to perform fuzzy matching of each word or vector from the candidate date sources and job data sources against each word or vector representation of the skill ontology. Blocking and other techniques will be needed to reduce the computational intensity of this task.
+4. Perform this skill extraction as part of a [python Azure Function custom skill](https://docs.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-python) in Azure Cognitive Search. Return the approximate skill matches to the search index to be used by the search service or [custom scoring profile](https://docs.microsoft.com/en-us/azure/search/index-add-scoring-profiles).
+
+Supervised Skill Extraction
+In supervised custom skill extraction, a custom Named Entity Recognition (NER) model and fuzzy matching is used to generate a data-driven skill ontology. This process involves the following steps:
+
+Generate an annotated training set of documents and and its associated skills to train a NER model. LUIS for Documents (LUIS-D) is an upcoming Azure service that helps with annotating and training a custom NER model. You can sign up for the private preview here .
+Train a custom NER model using the annotated training set using a python library such as SpaCy  or using a word embedding such as BERT , ELMo , Word2Vec  for a more context-aware NER model. Use this model to extract skill entities from both the candidate and job data sources.
+Leverage fuzzy matching techniques (see: fuzzy matching techniques) to perform fuzzy matching of each word or vector from the candidate date sources and job data sources against each other to conflate potential skills down to a skill ontology that includes synonyms that can be included in the Azure Cognitive Search index.
+Incorporate the NER model and fuzzy matching as part of a python Azure Function custom skill  in Azure Cognitive Search. Return the approximate skill matches to the search index to be used by the search service or custom scoring profile .
+
+Personalized Ranking
+Custom scoring profile  in Azure Cognitive Search can be used to incorporate custom logic for ranking and personalizing search results. By adding personalization features such as geographic closeness, interests, and user preferences datasets and incorporating matches to those criteria from the job postings (or projects or learning paths), the scoring profiles can be used to weigh these factors in addition to purely skill matches and provide a more catered experience to the end user.
+
+More sophisticated custom ranking models such as Learn-to-Rank Functions  like PageRank and WordNet can also be leveraged as a custom skill and the output can be incorporated into the scoring profile but these often require large volumes of training data. Reinforcement learning models can also be incorporated as custom skills to leverage clickstream data and user feedback to improve search rankings.
 
 
