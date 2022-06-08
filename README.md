@@ -1,4 +1,4 @@
-![banner](/fuzzylogo.png)
+![banner](/docs/fuzzylogo.png)
 
 # Fuzzy Matching
 
