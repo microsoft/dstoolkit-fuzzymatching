@@ -18,7 +18,7 @@ Deepen customer or patient insights; uncover errors in invoices or other large t
 
 ### Fuzzy Matching with Structured Data
 
-![Fuzzy Matching with Structured Data](/docs/fuzzy_matching_with_structured_data.png)
+![Fuzzy Matching with Structured Data](/architecture/fuzzy_matching_data_management_structured_data.png)
 
 The architecture for fuzzy matching for data management with structured data will generally follow the pattern for batch ingestion and enrichment of structured data. In the simplest example, this will involve:
 
@@ -29,7 +29,7 @@ The architecture for fuzzy matching for data management with structured data wil
 
 ### Fuzzy Matching with Structured and Unstructured Data
 
-![Fuzzy Matching with Structured and Unstructured Data](/docs/fuzzy_matching_with_structured_and_unstructured_data.png)
+![Fuzzy Matching with Structured and Unstructured Data](/architecture/fuzzy_matching_data_management_structured_and_unstructured_data.png)
 
 To incorporate unstructured data to a fuzzy matching architecture, you can add the general knowledge mining architecture to the ingestion process. This architecture that incorporates both structured and unstructured documents involves the following:
 
