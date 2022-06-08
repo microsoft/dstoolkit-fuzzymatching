@@ -131,12 +131,12 @@ Similarity algorithms can also be used on numeric, geographic, and date fields. 
 
 | Algorithm | Field Types | Python Libraries |
 | --- | --- | --- |
-| Step | Numeric, Geographic | Python Record Linkage Toolkit |
-| Linear | Numeric, Geographic | Python Record Linkage Toolkit |
-| Exponential | Numeric, Geographic | Python Record Linkage Toolkit | 
-| Gaussian | Numeric, Geographic | Python Record Linkage Toolkit |
-| Squared | Numeric, Geographic | Python Record Linkage Toolkit |
-| Date Similarity | Date | Python Record Linkage Toolkit |
+| [Step](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
+| [Linear](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
+| [Exponential](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) | 
+| [Gaussian](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
+| [Squared](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
+| [Date Similarity](https://github.com/J535D165/recordlinkage/blob/2524faddd4dc0a56a50c4b4461a45e72ba7be27e/recordlinkage/compare.py) | Date | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
 
 
 
