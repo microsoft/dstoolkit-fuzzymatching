@@ -138,13 +138,22 @@ Similarity algorithms can also be used on numeric, geographic, and date fields. 
 | [Squared](https://www.elastic.co/guide/en/elasticsearch/guide/current/decay-functions.html) | Numeric, Geographic | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
 | [Date Similarity](https://github.com/J535D165/recordlinkage/blob/2524faddd4dc0a56a50c4b4461a45e72ba7be27e/recordlinkage/compare.py) | Date | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
 
-
-
 ## Pre-Processing Techniques
 
 Prior to executing a matching algorithms, it is often useful to use pre-processing techniques to remove things like punctuation, accents, numbers and stop words from strings to improve matching performance. Below are some of the common NLP pre-processing techniques that can be used:
 
-**To be completed**
+| Algorithm | Description | Python Libraries |
+| --- | --- | --- |
+| Lowercase | Convert strings to lowercase so casing doesn't affect matching. Generally done as part of matching algorithms but may need to be done separately. | Python Record Linkage Toolkit, Pandas, PySpark |
+| Strip accents | Characters with accents can be mapped to their ASCII version to handle when you are comparing data in systems that do not handle accents in the same manner. | Python Record Linkage Toolkit |
+| Strip whitespace | Remove extra whitespace in strings | Pandas |
+| Remove stopwords | Stopwords such as a, an, or the can be removed to ensure string matching is occurring on useful strings. | NLTK, PySpark ML |
+| Expand contractions | It is often useful to expand contractions such as can't to can not to better match on these words | Contractions |
+| Regular Expression (RegEx) text pattern removal | Regular expression allows you to specify string patterns that you can then remove or replace with a space. For example this can be used to remove punctuation, numbers, hyperlinks or email addresses. RegEx can also be used to extract substring text patterns to match on. | Python Record Linkage Toolkit, Re, Pandas, PySpark |
+| Remove HTML Tags/Metadata | HTML tags and meta-data sometimes gets left in with data, especially if it was originally extracted form the web. | Beautiful Soup |
+| Stemming/Lemmatizing | Extract the root word(s) to normalize strings. For example running would become run. A stem may not be an actual word but a lemma corresponds to grammatically correct word root. | NLTK, Scikit-Learn, SpaCy, gensim, Spark NLP |
+| Phonetic encoding | Index words by their pronunciation using algorithms such as Soundex. | Python Record Linkage Toolkit |
+| Text Normalization | Transforming text into a single canonical form. Useful when there are abbreviations, synonyms, and multiple domain-specific representations of a word. Can be done in Python by passing a dictionary of synonyms to Pandas replace. | Pandas, PySpark |
 
 ---
 
