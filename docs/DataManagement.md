@@ -86,7 +86,7 @@ A number of OSS libraries exist for [Fuzzy](https://pypi.org/project/Fuzzy/) mat
 
 | Algorithm | Technique | Python LIbraries |
 | --- | --- | --- |
-| [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [[Fuzzy](https://pypi.org/project/Fuzzy/)wuzzy](https://github.com/seatgeek/[Fuzzy](https://pypi.org/project/Fuzzy/)wuzzy) |
+| [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) |
 | [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
 | [Jaro](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
 | [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [Spark-stringmetric (Spark)](https://github.com/MrPowers/spark-stringmetric) |
