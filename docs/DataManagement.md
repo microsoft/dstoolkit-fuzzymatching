@@ -86,44 +86,44 @@ A number of OSS libraries exist for fuzzy matching in python, R, and other langu
 
 | Algorithm | Technique | Python LIbraries |
 | --- | --- | --- |
-| [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance , Fuzzywuzzy |
-| [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance |
-| [Jaro](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | Python Record Linkage Toolkit |
-| [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
-| [Smith-Waterman](https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm) | Edit Based | Python Record Linkage Toolkit , Textdistance |
-| [Hamming](https://en.wikipedia.org/wiki/Hamming_distance) | Edit Based | Textdistance , Spark-stringmetric (Spark) |
-| [MLIPNS](http://www.sial.iias.spb.su/files/386-386-1-PB.pdf) | Edit Based | Textdistance |
-| [Strcmp95](http://cpansearch.perl.org/src/SCW/Text-JaroWinkler-0.1/strcmp95.com) | Edit Based | Textdistance |
-| [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm) | Edit Based | Textdistance |
-| [Gotoh](https://www.cs.umd.edu/class/spring2003/cmsc838t/papers/gotoh1982.pdf) | Edit Based | Textdistance |
-| [Jaccard](https://en.wikipedia.org/wiki/Jaccard_index) | Token Based | Textdistance , Spark-stringmetric (Spark)| 
-| [Sørensen–Dice](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) | Token Based | Textdistance |
-| [Tversky](https://en.wikipedia.org/wiki/Tversky_index) | Token Based | Textdistance |
-| [Overlap](https://en.wikipedia.org/wiki/Overlap_coefficient) | Token Based | Textdistance |
-| [Tanimoto](https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance) | Token Based | Textdistance |
-| [Cosine](https://en.wikipedia.org/wiki/Cosine_similarity) | Token Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
-| [Monge-Elkan](https://www.academia.edu/200314/Generalized_Monge-Elkan_Method_for_Approximate_Text_String_Comparison) | Token Based | Textdistance |
-| [Bag](https://github.com/Yomguithereal/talisman/blob/master/src/metrics/distance/bag.js) | Token Based | Textdistance |
-| [Q-Gram](https://en.wikipedia.org/wiki/N-gram#n-grams_for_approximate_matching) | Token Based | Python Record Linkage Toolkit |
+| [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) |
+| [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
+| [Jaro](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
+| [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), Spark-stringmetric (Spark) |
+| [Smith-Waterman](https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
+| [Hamming](https://en.wikipedia.org/wiki/Hamming_distance) | Edit Based | [Textdistance](https://pypi.org/project/textdistance/), Spark-stringmetric (Spark) |
+| [MLIPNS](http://www.sial.iias.spb.su/files/386-386-1-PB.pdf) | Edit Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Strcmp95](http://cpansearch.perl.org/src/SCW/Text-JaroWinkler-0.1/strcmp95.com) | Edit Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm) | Edit Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Gotoh](https://www.cs.umd.edu/class/spring2003/cmsc838t/papers/gotoh1982.pdf) | Edit Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Jaccard](https://en.wikipedia.org/wiki/Jaccard_index) | Token Based | [Textdistance](https://pypi.org/project/textdistance/), Spark-stringmetric (Spark)| 
+| [Sørensen–Dice](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Tversky](https://en.wikipedia.org/wiki/Tversky_index) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Overlap](https://en.wikipedia.org/wiki/Overlap_coefficient) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Tanimoto](https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Cosine](https://en.wikipedia.org/wiki/Cosine_similarity) | Token Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), Spark-stringmetric (Spark) |
+| [Monge-Elkan](https://www.academia.edu/200314/Generalized_Monge-Elkan_Method_for_Approximate_Text_String_Comparison) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Bag](https://github.com/Yomguithereal/talisman/blob/master/src/metrics/distance/bag.js) | Token Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Q-Gram](https://en.wikipedia.org/wiki/N-gram#n-grams_for_approximate_matching) | Token Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html) |
 | [DIMSUM (Spark)](https://blog.twitter.com/engineering/en_us/a/2014/all-pairs-similarity-via-dimsum.html) | Token Based | DIMSUM (Spark) |
-| [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) | Sequence Based | Textdistance |
-| [Longest Common Substring](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring) | Sequence Based | Python Record Linkage Toolkit , Textdistance |
-| [MRA](https://en.wikipedia.org/wiki/Match_rating_approach) | Phonetic Based | Textdistance |
-| [Editex](https://anhaidgroup.github.io/py_stringmatching/v0.3.x/Editex.html) | Phonetic Based | Textdistance |
-| [Soundex](http://en.wikipedia.org/wiki/Soundex) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
-| [NYSIIS](http://en.wikipedia.org/wiki/NYSIIS) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
-| [Double Metaphone](http://en.wikipedia.org/wiki/Metaphone) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) | Sequence Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Longest Common Substring](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring) | Sequence Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
+| [MRA](https://en.wikipedia.org/wiki/Match_rating_approach) | Phonetic Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Editex](https://anhaidgroup.github.io/py_stringmatching/v0.3.x/Editex.html) | Phonetic Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Soundex](http://en.wikipedia.org/wiki/Soundex) | Phonetic Based | Fuzzy, Spark-stringmetric (Spark) |
+| [NYSIIS](http://en.wikipedia.org/wiki/NYSIIS) | Phonetic Based | Fuzzy, Spark-stringmetric (Spark) |
+| [Double Metaphone](http://en.wikipedia.org/wiki/Metaphone) | Phonetic Based | Fuzzy, Spark-stringmetric (Spark) |
 | [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) | Word Embeddings | pytorch-pretained-bert |
 | [ELMo](https://allennlp.org/elmo) | Word Embeddings | TensorFlow Hub |
 | [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) | Word Embeddings | gensim |
-| [Arithmetic Coding](https://en.wikipedia.org/wiki/Arithmetic_coding) | Compression Based | Textdistance |
-| [RLE](https://en.wikipedia.org/wiki/Run-length_encoding) | Compression Based | Textdistance |
-| [BWT RLE](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) | Compression Based | Textdistance |
-| Square Root | Compression Based | Textdistance |
-| [Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) | Compression Based | Textdistance |
-| [BZ2](https://en.wikipedia.org/wiki/Bzip2) | Compression Based | Textdistance |
-| [LZMA](https://en.wikipedia.org/wiki/LZMA) | Compression Based | Textdistance |
-| [ZLib](https://en.wikipedia.org/wiki/Zlib) | Compression Based | Textdistance |
+| [Arithmetic Coding](https://en.wikipedia.org/wiki/Arithmetic_coding) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [RLE](https://en.wikipedia.org/wiki/Run-length_encoding) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [BWT RLE](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| Square Root | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [BZ2](https://en.wikipedia.org/wiki/Bzip2) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [LZMA](https://en.wikipedia.org/wiki/LZMA) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
+| [ZLib](https://en.wikipedia.org/wiki/Zlib) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
 
 
 
@@ -148,7 +148,7 @@ Because fuzzy matching algorithms typically require every string to be compared 
 
 ## Blocking/Indexing Techniques
 
-One method reduce the computational intensity is to restrict the number of records being compared to only plausible pairs. This can be done by restricting comparisons to just records where one or more other factors agree. For example: if you are trying to find all of the records for "John Smith" in New York City, you might only want to compare the name "John Smith" with other customers that have a city listed as New York, rather than the full data set. A method that builds off of this takes not just the records that agree on those factors, but also their nearest neighbors to avoid matching on the full dataset but reduce the number of false negatives from standard blocking. [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/ref-index.html#recordlinkage.index.Block) has implementations of both of these blocking methods.
+One method reduce the computational intensity is to restrict the number of records being compared to only plausible pairs. This can be done by restricting comparisons to just records where one or more other factors agree. For example: if you are trying to find all of the records for "John Smith" in New York City, you might only want to compare the name "John Smith" with other customers that have a city listed as New York, rather than the full data set. A method that builds off of this takes not just the records that agree on those factors, but also their nearest neighbors to avoid matching on the full dataset but reduce the number of false negatives from standard blocking. [[Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html)](https://recordlinkage.readthedocs.io/en/latest/ref-index.html#recordlinkage.index.Block) has implementations of both of these blocking methods.
 
 Another technique that can be used when a labelled training set is provided is to start with an efficient nearest neighbors search using techniques such as LSH to find the k nearest neighbors for each record and use that to reduce the search space for fuzzy matching. Spotify's [Annoy](https://github.com/spotify/annoy) is one of the most efficient k-NN algorithms which can be used.
 
@@ -158,7 +158,7 @@ In addition to reducing the search space, scalability concerns can be addressed 
 
 ## Parallelization with Dask
 
-[Dask](https://docs.dask.org/en/latest/) is a Python library for parallelizing and optimizing python code to make it scalable. An advantage compared to Spark is that Dask can be used to scale any python code and is therefore not just limited to libraries written for Spark. Rather than operated in a single-threaded manner, Dask allows for multi-threading, scaling across multiple nodes, and lazy execution, similar to Spark. An example of using Dask to parallelize fuzzy matching code using the Python library [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) can be found here in the *notebook* folder.
+[Dask](https://docs.dask.org/en/latest/) is a Python library for parallelizing and optimizing python code to make it scalable. An advantage compared to Spark is that Dask can be used to scale any python code and is therefore not just limited to libraries written for Spark. Rather than operated in a single-threaded manner, Dask allows for multi-threading, scaling across multiple nodes, and lazy execution, similar to Spark. An example of using Dask to parallelize fuzzy matching code using the Python library [[Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)](https://github.com/seatgeek/[Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)) can be found here in the *notebook* folder.
 
 ---
 
