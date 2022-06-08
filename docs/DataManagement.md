@@ -105,26 +105,25 @@ A number of OSS libraries exist for fuzzy matching in python, R, and other langu
 | Monge-Elkan | Token Based | Textdistance |
 | Bag | Token Based | Textdistance |
 | Q-Gram | Token Based | Python Record Linkage Toolkit |
-
-DIMSUM (Spark) 	Token Based	DIMSUM (Spark) 
-Longest Common Subsequence 	Sequence Based	Textdistance 
-Longest Common Substring 	Sequence Based	Python Record Linkage Toolkit , Textdistance 
-MRA 	Phonetic Based	Textdistance 
-Editex 	Phonetic Based	Textdistance 
-Soundex 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
-NYSIIS 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
-Double Metaphone 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
-BERT 	Word Embeddings	pytorch-pretained-bert 
-ELMo 	Word Embeddings	TensorFlow Hub 
-Word2Vec 	Word Embeddings	gensim 
-Arithmetic Coding 	Compression Based	Textdistance 
-RLE 	Compression Based	Textdistance 
-BWT RLE 	Compression Based	Textdistance 
-Square Root	Compression Based	Textdistance 
-Entropy 	Compression Based	Textdistance 
-BZ2 	Compression Based	Textdistance 
-LZMA 	Compression Based	Textdistance 
-ZLib 	Compression Based	Textdistance 
+| DIMSUM (Spark) | Token Based | DIMSUM (Spark) |
+| Longest Common Subsequence | Sequence Based | Textdistance |
+| Longest Common Substring | Sequence Based | Python Record Linkage Toolkit , Textdistance |
+| MRA | Phonetic Based | Textdistance |
+| Editex | Phonetic Based | Textdistance |
+| Soundex | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| NYSIIS | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| Double Metaphone | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| BERT | Word Embeddings | pytorch-pretained-bert |
+| ELMo | Word Embeddings | TensorFlow Hub |
+| Word2Vec | Word Embeddings | gensim |
+| Arithmetic Coding | Compression Based | Textdistance |
+| RLE | Compression Based | Textdistance |
+| BWT RLE | Compression Based | Textdistance |
+| Square Root | Compression Based | Textdistance |
+| Entropy | Compression Based | Textdistance |
+| BZ2 | Compression Based | Textdistance |
+| LZMA | Compression Based | Textdistance |
+| ZLib | Compression Based | Textdistance |
 
 
 
