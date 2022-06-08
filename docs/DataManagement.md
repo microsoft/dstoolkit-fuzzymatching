@@ -87,6 +87,46 @@ A number of OSS libraries exist for fuzzy matching in python, R, and other langu
 | Algorithm | Technique | Python LIbraries |
 | --- | --- | --- |
 | Levenshtein | Edit Based | Python Record Linkage Toolkit , Textdistance , Fuzzywuzzy |
+| Damerau-Levenshtein | Edit Based | Python Record Linkage Toolkit , Textdistance |
+| Jaro | Edit Based | Python Record Linkage Toolkit |
+| Jaro-Winkler | Edit Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
+| Smith-Waterman | Edit Based | Python Record Linkage Toolkit , Textdistance |
+| Hamming | Edit Based | Textdistance , Spark-stringmetric (Spark) |
+| MLIPNS | Edit Based | Textdistance |
+| Strcmp95 | Edit Based | Textdistance |
+| Needleman-Wunsch | Edit Based | Textdistance |
+| Gotoh | Edit Based | Textdistance |
+| Jaccard | Token Based | Textdistance , Spark-stringmetric (Spark)| 
+| Sørensen–Dice | Token Based | Textdistance |
+| Tversky | Token Based | Textdistance |
+| Overlap | Token Based | Textdistance |
+| Tanimoto | Token Based | Textdistance |
+| Cosine | Token Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
+| Monge-Elkan | Token Based | Textdistance |
+| Bag | Token Based | Textdistance |
+| Q-Gram | Token Based | Python Record Linkage Toolkit |
+
+DIMSUM (Spark) 	Token Based	DIMSUM (Spark) 
+Longest Common Subsequence 	Sequence Based	Textdistance 
+Longest Common Substring 	Sequence Based	Python Record Linkage Toolkit , Textdistance 
+MRA 	Phonetic Based	Textdistance 
+Editex 	Phonetic Based	Textdistance 
+Soundex 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
+NYSIIS 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
+Double Metaphone 	Phonetic Based	Fuzzy , Spark-stringmetric (Spark) 
+BERT 	Word Embeddings	pytorch-pretained-bert 
+ELMo 	Word Embeddings	TensorFlow Hub 
+Word2Vec 	Word Embeddings	gensim 
+Arithmetic Coding 	Compression Based	Textdistance 
+RLE 	Compression Based	Textdistance 
+BWT RLE 	Compression Based	Textdistance 
+Square Root	Compression Based	Textdistance 
+Entropy 	Compression Based	Textdistance 
+BZ2 	Compression Based	Textdistance 
+LZMA 	Compression Based	Textdistance 
+ZLib 	Compression Based	Textdistance 
+
+
 
 
 ## Similarity Algorithms for Other Field Types
