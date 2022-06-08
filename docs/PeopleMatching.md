@@ -26,11 +26,11 @@ If you are building a People Matching system that requires an existing skill ont
 
 For building People Matching scenarios using derived skill ontologies, it is important to first define what skill expertise means and then to identify possible data sources for the different components of skill expertise. Based on research on the design of expertise finding systems, skill expertise can be generally divided into the 4 areas shown below:
 
-![Derived Ontology Sources](/architecture/fuzzy_matching_people_matching_ontology_sources.png)
+![Derived Ontology Sources](/docs/fuzzy_matching_people_matching_ontology_sources.png)
 
 In addition, a list of some of the common data sources used (both structured and unstructured) that represent explicit or implicit indicators of skill expertise can be found below:
 
-![Implicit Indicators vs. Explicit Indicators](/architecture/fuzzy_matching_people_matching_indicators.png)
+![Implicit Indicators vs. Explicit Indicators](/docs/fuzzy_matching_people_matching_indicators.png)
 
 Additional details on approaches and a demo for automated expertise finding can be found in the *docs* folder.
 
@@ -40,7 +40,7 @@ Additional details on approaches and a demo for automated expertise finding can 
 
 ### First-Party Azure Architecture
 
-![First-Party Azure Architecture](/docs/fuzzy_matching_people_matching_architecture.png)
+![First-Party Azure Architecture](/architecture/fuzzy_matching_people_matching_architecture.png)
 
 A high-level people matching architecture using first party Azure tools will generally follow the pattern above:
 
@@ -51,7 +51,7 @@ A high-level people matching architecture using first party Azure tools will gen
 
 ### Custom Open Source Software (OSS) Architecture
 
-![First-Party Azure Architecture](/docs/fuzzy_matching_people_matching_oss_architecture.png)
+![First-Party Azure Architecture](/architecture/fuzzy_matching_people_matching_oss_architecture.png)
 
 If a more custom approach is needed for skill extraction and/or incorporating custom ranking/personalization features, an architecture that supports additional open source logic may be required. While the overall architectural components that are recommended do not change, a custom skill in Azure Cognitive Search can be used to handle custom skill extraction and a custom scoring profile can be created to handle customized ranking. The process for this pattern will look like this:
 
