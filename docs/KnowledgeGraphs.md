@@ -20,11 +20,11 @@ Uncover derived insights from large volumes of domain-specific structured and un
 
 ## Architecture
 
-![Architecture](/docs/fuzzy_matching_knowledge_graphs_architecture.png)
+![Architecture](/architecture/fuzzy_matching_knowledge_graphs_architecture.png)
 
 This architecture was built by Salim Naim (Architect Manager) and Ahmar Kazi (Solution Architect) for a knowledge graph solution on Azure using Cosmos DB and the Gremlin API for JPMorgan. You can learn more about this architecture and example code here: [Deep Fin: Knowledge Graphs](https://github.com/salimngit/DeepFin-Series-JPMorgan/blob/master/Knowledge%20Graph/Knowledge%20Graph.ipynb).
 
-![Architecture](/docs/fuzzy_matching_knowledge_graphs_alt_architecture.png)
+![Architecture](/architecture/fuzzy_matching_knowledge_graphs_alt_architecture.png)
 
 An alternative architecture comes from the Trusted and Connected Data Services Team in CSEO. In this [MLADS talk](https://msit.microsoftstream.com/video/2425a1ff-0400-a936-fd76-f1eaa68afd5c?channelId=e34ba1ff-0400-a936-7258-f1eaa6716ffe) and deck (*MLADSDataUnificationAtScale.pptx* found in the *docs* folder) Danny Godbout (Data Scientist) discuss an approach for fuzzy matching that uses graph frames in Databricks Spark to visualize and derive insights from a record linkage problem. This architecture pattern can form a component of a larger of a knowledge graph solution by handling the fuzzy matching of entities from various data source at scale and representing the results of that fuzzy matching into a Spark graph frame that can form the foundation of an enterprise knowledge graph.
 
