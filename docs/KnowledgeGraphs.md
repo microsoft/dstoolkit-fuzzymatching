@@ -19,3 +19,5 @@ Uncover derived insights from large volumes of domain-specific structured and un
 ---
 
 ## Architecture
+
+![Architecture](/docs/fuzzy_matching_knowledge_graphs_architecture.png)
