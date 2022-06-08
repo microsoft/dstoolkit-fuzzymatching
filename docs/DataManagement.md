@@ -86,44 +86,44 @@ A number of OSS libraries exist for fuzzy matching in python, R, and other langu
 
 | Algorithm | Technique | Python LIbraries |
 | --- | --- | --- |
-| Levenshtein | Edit Based | Python Record Linkage Toolkit , Textdistance , Fuzzywuzzy |
-| Damerau-Levenshtein | Edit Based | Python Record Linkage Toolkit , Textdistance |
-| Jaro | Edit Based | Python Record Linkage Toolkit |
-| Jaro-Winkler | Edit Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
-| Smith-Waterman | Edit Based | Python Record Linkage Toolkit , Textdistance |
-| Hamming | Edit Based | Textdistance , Spark-stringmetric (Spark) |
-| MLIPNS | Edit Based | Textdistance |
-| Strcmp95 | Edit Based | Textdistance |
-| Needleman-Wunsch | Edit Based | Textdistance |
-| Gotoh | Edit Based | Textdistance |
-| Jaccard | Token Based | Textdistance , Spark-stringmetric (Spark)| 
-| Sørensen–Dice | Token Based | Textdistance |
-| Tversky | Token Based | Textdistance |
-| Overlap | Token Based | Textdistance |
-| Tanimoto | Token Based | Textdistance |
-| Cosine | Token Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
-| Monge-Elkan | Token Based | Textdistance |
-| Bag | Token Based | Textdistance |
-| Q-Gram | Token Based | Python Record Linkage Toolkit |
-| DIMSUM (Spark) | Token Based | DIMSUM (Spark) |
-| Longest Common Subsequence | Sequence Based | Textdistance |
-| Longest Common Substring | Sequence Based | Python Record Linkage Toolkit , Textdistance |
-| MRA | Phonetic Based | Textdistance |
-| Editex | Phonetic Based | Textdistance |
-| Soundex | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
-| NYSIIS | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
-| Double Metaphone | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
-| BERT | Word Embeddings | pytorch-pretained-bert |
-| ELMo | Word Embeddings | TensorFlow Hub |
-| Word2Vec | Word Embeddings | gensim |
-| Arithmetic Coding | Compression Based | Textdistance |
-| RLE | Compression Based | Textdistance |
-| BWT RLE | Compression Based | Textdistance |
+| [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance , Fuzzywuzzy |
+| [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance |
+| [Jaro](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | Python Record Linkage Toolkit |
+| [Jaro-Winkler](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) | Edit Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
+| [Smith-Waterman](https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm) | Edit Based | Python Record Linkage Toolkit , Textdistance |
+| [Hamming](https://en.wikipedia.org/wiki/Hamming_distance) | Edit Based | Textdistance , Spark-stringmetric (Spark) |
+| [MLIPNS](http://www.sial.iias.spb.su/files/386-386-1-PB.pdf) | Edit Based | Textdistance |
+| [Strcmp95](http://cpansearch.perl.org/src/SCW/Text-JaroWinkler-0.1/strcmp95.com) | Edit Based | Textdistance |
+| [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm) | Edit Based | Textdistance |
+| [Gotoh](https://www.cs.umd.edu/class/spring2003/cmsc838t/papers/gotoh1982.pdf) | Edit Based | Textdistance |
+| [Jaccard](https://en.wikipedia.org/wiki/Jaccard_index) | Token Based | Textdistance , Spark-stringmetric (Spark)| 
+| [Sørensen–Dice](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) | Token Based | Textdistance |
+| [Tversky](https://en.wikipedia.org/wiki/Tversky_index) | Token Based | Textdistance |
+| [Overlap](https://en.wikipedia.org/wiki/Overlap_coefficient) | Token Based | Textdistance |
+| [Tanimoto](https://en.wikipedia.org/wiki/Jaccard_index#Tanimoto_similarity_and_distance) | Token Based | Textdistance |
+| [Cosine](https://en.wikipedia.org/wiki/Cosine_similarity) | Token Based | Python Record Linkage Toolkit , Textdistance , Spark-stringmetric (Spark) |
+| [Monge-Elkan](https://www.academia.edu/200314/Generalized_Monge-Elkan_Method_for_Approximate_Text_String_Comparison) | Token Based | Textdistance |
+| [Bag](https://github.com/Yomguithereal/talisman/blob/master/src/metrics/distance/bag.js) | Token Based | Textdistance |
+| [Q-Gram](https://en.wikipedia.org/wiki/N-gram#n-grams_for_approximate_matching) | Token Based | Python Record Linkage Toolkit |
+| [DIMSUM (Spark)](https://blog.twitter.com/engineering/en_us/a/2014/all-pairs-similarity-via-dimsum.html) | Token Based | DIMSUM (Spark) |
+| [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) | Sequence Based | Textdistance |
+| [Longest Common Substring](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring) | Sequence Based | Python Record Linkage Toolkit , Textdistance |
+| [MRA](https://en.wikipedia.org/wiki/Match_rating_approach) | Phonetic Based | Textdistance |
+| [Editex](https://anhaidgroup.github.io/py_stringmatching/v0.3.x/Editex.html) | Phonetic Based | Textdistance |
+| [Soundex](http://en.wikipedia.org/wiki/Soundex) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| [NYSIIS](http://en.wikipedia.org/wiki/NYSIIS) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| [Double Metaphone](http://en.wikipedia.org/wiki/Metaphone) | Phonetic Based | Fuzzy , Spark-stringmetric (Spark) |
+| [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) | Word Embeddings | pytorch-pretained-bert |
+| [ELMo](https://allennlp.org/elmo) | Word Embeddings | TensorFlow Hub |
+| [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) | Word Embeddings | gensim |
+| [Arithmetic Coding](https://en.wikipedia.org/wiki/Arithmetic_coding) | Compression Based | Textdistance |
+| [RLE](https://en.wikipedia.org/wiki/Run-length_encoding) | Compression Based | Textdistance |
+| [BWT RLE](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform) | Compression Based | Textdistance |
 | Square Root | Compression Based | Textdistance |
-| Entropy | Compression Based | Textdistance |
-| BZ2 | Compression Based | Textdistance |
-| LZMA | Compression Based | Textdistance |
-| ZLib | Compression Based | Textdistance |
+| [Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) | Compression Based | Textdistance |
+| [BZ2](https://en.wikipedia.org/wiki/Bzip2) | Compression Based | Textdistance |
+| [LZMA](https://en.wikipedia.org/wiki/LZMA) | Compression Based | Textdistance |
+| [ZLib](https://en.wikipedia.org/wiki/Zlib) | Compression Based | Textdistance |
 
 
 
