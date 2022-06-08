@@ -84,7 +84,7 @@ The most common approach to [Fuzzy](https://pypi.org/project/Fuzzy/) matching is
 
 A number of OSS libraries exist for [Fuzzy](https://pypi.org/project/Fuzzy/) matching in python, R, and other languages. Below is a table with the algorithms linked to details about how they work, the type of technique, and a Python library where they can be used.
 
-| **Algorithm** | **Technique** | **Python Libraries** |
+| Algorithm | Technique | Python Libraries |
 | --- | --- | --- |
 | [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/), [Fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) |
 | [Damerau-Levenshtein](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) | Edit Based | [Python Record Linkage Toolkit](https://recordlinkage.readthedocs.io/en/latest/about.html), [Textdistance](https://pypi.org/project/textdistance/) |
@@ -125,14 +125,20 @@ A number of OSS libraries exist for [Fuzzy](https://pypi.org/project/Fuzzy/) mat
 | [LZMA](https://en.wikipedia.org/wiki/LZMA) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
 | [ZLib](https://en.wikipedia.org/wiki/Zlib) | Compression Based | [Textdistance](https://pypi.org/project/textdistance/) |
 
-
-
-
 ## Similarity Algorithms for Other Field Types
 
 Similarity algorithms can also be used on numeric, geographic, and date fields. Below is a table that details these.
 
-**To be completed**
+| Algorithm | Field Types | Python Libraries |
+| --- | --- | --- |
+| Step | Numeric, Geographic | Python Record Linkage Toolkit |
+| Linear | Numeric, Geographic | Python Record Linkage Toolkit |
+| Exponential | Numeric, Geographic | Python Record Linkage Toolkit | 
+| Gaussian | Numeric, Geographic | Python Record Linkage Toolkit |
+| Squared | Numeric, Geographic | Python Record Linkage Toolkit |
+| Date Similarity | Date | Python Record Linkage Toolkit |
+
+
 
 ## Pre-Processing Techniques
 
